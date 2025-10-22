@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kettlebell Foundations | Entrenamiento Personal Certificado a Domicilio</title>
+    <title>Plan Kettlebell Foundations | Entrenamiento Personal con Miguel</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/tu_codigo_font_awesome.js" crossorigin="anonymous"></script> 
+    
     <style>
-        /* ==================== */
-        /* === ESTILOS CSS === */
-        /* ==================== */
-
-        /* Variables de Color (UI/UX) */
+        /* [Se mantiene el CSS de la versión anterior para UI/UX] */
         :root {
             --blanco: #FFFFFF;
-            --azul-claro: #E9F1FA; /* Fondo suave */
-            --azul-principal: #00ABE4; /* CTA y detalles */
-            --azul-oscuro: #1A2A42; /* Texto y contraste */
-            --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --azul-claro: #F0F8FF;
+            --azul-principal: #00ABE4;
+            --azul-oscuro: #1A2A42;
+            --sombra-suave: 0 6px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Base */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -33,377 +30,250 @@
             background-color: var(--blanco);
         }
 
-        /* Contenedor General */
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Tipografía */
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--azul-oscuro);
-        }
-        h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--azul-principal);
-            margin-bottom: 15px;
-        }
-        h3 {
-            font-size: 1.5rem;
-            color: var(--azul-oscuro);
-            margin-bottom: 10px;
-        }
-
-        /* Botón CTA Principal */
+        h1 { font-size: 3rem; font-weight: 700; line-height: 1.1; color: var(--azul-oscuro); }
+        h2 { font-size: 2rem; font-weight: 600; color: var(--azul-principal); text-align: center; margin-bottom: 30px; }
+        h3 { font-size: 1.5rem; color: var(--azul-oscuro); margin-bottom: 15px; }
+        
+        /* CTA Button */
         .cta-button {
             display: inline-block;
             background-color: var(--azul-principal);
             color: var(--blanco);
-            padding: 15px 30px;
-            font-size: 1.1rem;
+            padding: 18px 40px;
+            font-size: 1.2rem;
             font-weight: 700;
             text-decoration: none;
             border-radius: 50px;
             transition: background-color 0.3s, transform 0.2s;
-            box-shadow: var(--sombra-suave);
+            box-shadow: 0 6px 15px rgba(0, 171, 228, 0.4);
         }
         .cta-button:hover {
-            background-color: #008cc9; /* Tono más oscuro de azul */
-            transform: translateY(-2px);
+            background-color: #0099c9;
+            transform: translateY(-3px);
         }
 
-        /* ==================== */
-        /* === SECCIONES === */
-        /* ==================== */
+        /* Hero Section */
+        #hero { background: var(--azul-claro); padding: 80px 0 60px; text-align: center; }
+        #hero h1 { color: var(--azul-principal); font-size: 3.5rem; }
+        #hero p.intro { font-size: 1.4rem; max-width: 700px; margin: 20px auto 40px; color: var(--azul-oscuro); }
+        .trainer-signature { font-size: 1.1rem; font-weight: 600; margin-top: 10px; }
 
-        /* 1. Hero Section */
-        #hero {
-            background: var(--azul-claro);
-            padding: 80px 0;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-        }
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-        .hero-text {
-            flex: 1;
-        }
-        .hero-image {
-            flex: 1;
-            max-width: 500px;
-        }
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: var(--sombra-suave);
-        }
-        .hero-text .subtitulo {
-            font-size: 1.3rem;
-            color: var(--azul-oscuro);
-            margin: 20px 0 30px;
-        }
-        .hero-text .uvp {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--azul-oscuro);
-            margin-bottom: 40px;
-        }
+        /* Beneficios Section */
+        #beneficios { padding: 60px 0; }
+        .beneficios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
+        .beneficio-card { background: var(--blanco); padding: 30px; border-radius: 10px; box-shadow: var(--sombra-suave); border-left: 5px solid var(--azul-principal); }
+        .beneficio-card strong { color: var(--azul-principal); font-weight: 600; display: block; margin-bottom: 5px; }
 
-        /* 2. Problema -> Solución */
-        #problema-solucion {
-            padding: 60px 0;
-            text-align: center;
-        }
-        .solucion-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .solucion-card {
-            background: var(--blanco);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--sombra-suave);
-            border-top: 5px solid var(--azul-principal);
-        }
-        .solucion-card i {
-            font-size: 2rem;
-            color: var(--azul-principal);
-            margin-bottom: 15px;
-        }
+        /* Ciencia del Descanso Section */
+        #ciencia { background-color: var(--azul-claro); padding: 60px 0; text-align: center; }
+        .ciencia-box { background: var(--blanco); padding: 30px; border-radius: 10px; max-width: 750px; margin: 30px auto; text-align: left; box-shadow: var(--sombra-suave); }
+        .ciencia-box p strong { color: var(--azul-principal); }
 
-        /* 3. La Ciencia de Mis Rutinas */
-        #ciencia {
-            background-color: var(--azul-claro);
-            padding: 60px 0;
-            text-align: center;
-        }
-        .ciencia-box {
-            background: var(--blanco);
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 800px;
-            margin: 30px auto;
-            text-align: left;
-            box-shadow: var(--sombra-suave);
-        }
-        .ciencia-box strong {
-            color: var(--azul-principal);
-            font-weight: 700;
-        }
+        /* Plan de Entrenamiento (Nueva Estructura de Listas) */
+        #plan-rutina { padding: 60px 0; }
+        .day-details { margin-bottom: 40px; padding: 20px; border-bottom: 2px solid var(--azul-claro); }
+        .day-details h3 { color: var(--azul-oscuro); border-left: 4px solid var(--azul-principal); padding-left: 10px; }
+        .exercise-list { list-style: none; padding-left: 0; margin-top: 15px; }
+        .exercise-list li { margin-bottom: 10px; padding: 10px; background-color: var(--azul-claro); border-radius: 5px; }
+        .exercise-list li strong { color: var(--azul-oscuro); display: inline-block; min-width: 180px; }
+        .exercise-list li a { color: var(--azul-principal); text-decoration: none; font-weight: 600; margin-left: 10px; }
+        .exercise-list li a:hover { text-decoration: underline; }
 
-        /* 4. Beneficios Kettlebells */
-        #beneficios {
-            padding: 60px 0;
-            text-align: center;
-        }
-        .beneficios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-        .beneficio-item {
-            padding: 20px;
-            border: 1px solid var(--azul-claro);
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        /* 5. El Plan */
-        #plan {
-            background-color: var(--azul-oscuro);
-            padding: 60px 0;
-            color: var(--blanco);
-            text-align: center;
-        }
-        #plan h2 {
-            color: var(--azul-principal);
-        }
-        .plan-details {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-            margin: 40px 0;
-        }
-        .plan-precio {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--blanco);
-            line-height: 1;
-        }
-        .plan-lista {
-            text-align: left;
-            list-style: none;
-            font-size: 1.1rem;
-        }
-        .plan-lista li {
-            margin-bottom: 15px;
-        }
-        .plan-lista li::before {
-            content: "✅";
-            margin-right: 10px;
-        }
-
-        /* 6. CTA Final */
-        #cta-final {
-            padding: 50px 0;
-            text-align: center;
-            background-color: var(--blanco);
-        }
+        /* CTA Final */
+        #cta-final { padding: 50px 0; background-color: var(--azul-oscuro); color: var(--blanco); text-align: center; }
+        #cta-final h2 { color: var(--blanco); margin-bottom: 20px; }
+        #cta-final p { font-size: 1.1rem; margin-bottom: 30px; }
 
         /* Footer */
-        footer {
-            background-color: var(--azul-oscuro);
-            color: var(--azul-claro);
-            padding: 20px 0;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: var(--azul-claro);
-            text-decoration: none;
-            margin: 0 10px;
-        }
+        footer { background-color: var(--azul-oscuro); color: var(--azul-claro); padding: 20px 0; text-align: center; font-size: 0.85rem; border-top: 5px solid var(--azul-principal); }
 
-        /* Media Queries para Responsividad Móvil */
+        /* Responsividad - Ajuste de tabla/lista en móvil */
         @media (max-width: 768px) {
-            #hero {
-                min-height: 90vh;
-                padding: 60px 0;
-            }
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero-image {
-                order: -1; /* Mueve la imagen arriba en móviles */
-                margin-bottom: 20px;
-            }
-            h1 {
-                font-size: 2.2rem;
-            }
-            .plan-details {
-                flex-direction: column;
-            }
-            .plan-precio {
-                margin-bottom: 20px;
-            }
+            h1 { font-size: 2.5rem; }
+            .exercise-list li strong { display: block; min-width: auto; }
         }
     </style>
 </head>
 <body>
 
     <main>
-        <section id="hero" class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>ENTRENA INTELIGENTE EN CASA: <br>Kettlebells con un Experto Certificado.</h1>
-                    <p class="subtitulo">
-                        Fuerza, Pérdida de Grasa y Técnica Perfecta, garantizado por la ciencia, **sin salir de tu hogar.**
-                    </p>
-                    <p class="uvp">
-                        Soy tu entrenador personal certificado. **Llevo toda la implementación (Kettlebells) sin costo extra.**
-                    </p>
-                    <a href="#plan" class="cta-button">
-                        👉 COMIENZA HOY: Plan Foundations (1 UF/mes)
-                    </a>
-                </div>
-                <div class="hero-image">
-                    <img src="placeholder-trainer.jpg" alt="Entrenador personal certificado corrigiendo Sentadilla Goblet con kettlebell a cliente en casa.">
+        <section id="hero">
+            <div class="container">
+                <h1>¡Bienvenida a Kettlebell Foundations, Catalina!</h1>
+                <p class="intro">
+                    Soy Miguel, tu entrenador certificado. Este es el programa diseñado **específicamente para ti** para que logres una base de fuerza sólida y una técnica perfecta, usando la herramienta más versátil: la Kettlebell.
+                </p>
+                <div class="trainer-signature">
+                    — Miguel (Tu Entrenador Certificado)
                 </div>
             </div>
         </section>
 
-        <section id="problema-solucion" class="container">
-            <h2>Transforma tus Obstáculos en Resultados</h2>
-            <div class="solucion-grid">
-                <article class="solucion-card">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    <h3>"No sé qué comprar."</h3>
-                    <p><strong>Implementación Incluida.</strong> No gaste en equipo. Yo llevo las Kettlebells necesarias para cada sesión presencial.</p>
+        <section id="beneficios" class="container">
+            <h2>🥇 Los Beneficios Inigualables que Ganarás</h2>
+            <div class="beneficios-grid">
+                <article class="beneficio-card">
+                    <i class="fas fa-hand-rock" style="color: var(--azul-principal);"></i>
+                    <h3>Fuerza Funcional Superior</h3>
+                    <p><strong>Lo que ganas:</strong> Potencia que se traduce directamente en tu día a día (cargar bolsas, mover objetos) con ejercicios compuestos.</p>
                 </article>
-                <article class="solucion-card">
-                    <i class="fas fa-clock"></i>
-                    <h3>"No tengo tiempo."</h3>
-                    <p><strong>Rutinas Optimizadas (30 Min).</strong> Sesiones diarias de solo 30 minutos, diseñadas para máxima eficiencia en poco tiempo.</p>
+                <article class="beneficio-card">
+                    <i class="fas fa-fire" style="color: var(--azul-principal);"></i>
+                    <h3>Quema de Grasa Eficiente</h3>
+                    <p><strong>Lo que ganas:</strong> Generan alto impacto metabólico, quemando calorías de manera eficiente, incluso después de terminar la sesión (*afterburn*).</p>
                 </article>
-                <article class="solucion-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>"Me da miedo lesionarme."</h3>
-                    <p><strong>Técnica Certificada.</strong> Mi doble certificación garantiza que aprenda la técnica perfecta para prevenir dolores y maximizar ganancias.</p>
+                <article class="beneficio-card">
+                    <i class="fas fa-dumbbell" style="color: var(--azul-principal);"></i>
+                    <h3>Core de Acero y Postura</h3>
+                    <p><strong>Lo que ganas:</strong> Fortalecimiento profundo de tu zona media, clave para la estabilidad y la **reducción de dolores** de espalda.</p>
                 </article>
             </div>
         </section>
 
         <section id="ciencia">
             <div class="container">
-                <h2>🔬 La Metodología de 3 Minutos: Desarrollo de Fuerza Óptimo</h2>
+                <h2>🔬 La Ciencia Detrás de Tu Éxito: El Descanso de 3 Minutos</h2>
                 <div class="ciencia-box">
+                    <h3>Metodología Optimizada para la Fuerza</h3>
                     <p>
-                        Como su entrenador, diseño sus rutinas basándome en la evidencia. El objetivo principal en la fase Foundations es construir **fuerza y masa muscular** de forma segura.
+                        Tu objetivo en esta etapa es construir **fuerza y masa muscular**. La ciencia demuestra que un descanso de **3 minutos entre las series principales** es superior para lograrlo.
                     </p>
                     <p>
-                        La investigación reciente (respaldada por Scielo y MensHealth) demuestra que el descanso de **3 minutos entre series** en ejercicios clave (como la Sentadilla Goblet) es **superior** para este objetivo.
-                    </p>
-                    <p>
-                        <strong>Su Beneficio:</strong> Este tiempo de recuperación garantiza la **calidad** de cada repetición y asegura que sus músculos reciban el estímulo óptimo para crecer, justificando así la estructura de nuestras rutinas de 30 minutos.
+                        <strong>Tu Beneficio Directo:</strong> Este tiempo de recuperación permite que tus músculos recuperen la energía necesaria para que la próxima serie se realice con la **máxima fuerza y la mejor técnica posible**. Así garantizamos que, en solo 25 minutos de trabajo efectivo, obtienes el estímulo óptimo.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="beneficios" class="container">
-            <h2>✨ 7 Poderosas Ventajas del Entrenamiento con Kettlebells</h2>
-            <div class="beneficios-grid">
-                <div class="beneficio-item">
-                    <h3>Fuerza Funcional</h3>
-                    <p>Ejercicios compuestos que trabajan múltiples grupos musculares a la vez.</p>
-                </div>
-                <div class="beneficio-item">
-                    <h3>Quema de Grasa</h3>
-                    <p>Alto impacto metabólico con efecto *afterburn* prolongado.</p>
-                </div>
-                <div class="beneficio-item">
-                    <h3>Core Indestructible</h3>
-                    <p>Máximo trabajo de estabilidad y anti-rotación para una postura sana.</p>
-                </div>
-                <div class="beneficio-item">
-                    <h3>Movilidad Mejorada</h3>
-                    <p>Movimientos dinámicos que aumentan su rango de movimiento.</p>
-                </div>
-                <div class="beneficio-item">
-                    <h3>Fuerza de Agarre</h3>
-                    <p>Aumento significativo en la fuerza de manos y antebrazos.</p>
-                </div>
-                <div class="beneficio-item">
-                    <h3>Adiós Dolores</h3>
-                    <p>Técnica adecuada que ayuda a reducir molestias de cuello, hombros y espalda.</p>
-                </div>
+        <section id="plan-rutina" class="container">
+            <h2>🗓️ Tu Plan de Entrenamiento Semanal (30 Minutos Diarios)</h2>
+            <p style="text-align: center; margin-bottom: 40px;">
+                *Cada sesión dura exactamente 30 minutos. Todos los ejercicios se realizan con kettlebells.*
+            </p>
+
+            <div class="day-details">
+                <h3><i class="far fa-calendar-check"></i> Lunes: Fuerza Principal (Empuje y Core)</h3>
+                <p><strong>Estructura:</strong> 3 Series de A1 y A2. ¡3 minutos de descanso entre series A1 y 3 minutos entre series A2!</p>
+                <ul class="exercise-list">
+                    <li>
+                        <strong>A1: Sentadilla Goblet (10 Rep.)</strong> 
+                        — <small>Sujeta la KB contra tu pecho y haz una sentadilla profunda manteniendo el pecho alto.</small>
+                        <a href="https://www.youtube.com/watch?v=MWHIs0zxkCU" target="_blank">Ver Video</a>
+                    </li>
+                    <li>
+                        <strong>A2: Plancha Alta con Manos en KB (45 Seg.)</strong>
+                        — <small>Plancha con las manos agarrando las asas de las KB. Enfócate en la estabilidad.</small>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="day-details">
+                <h3><i class="far fa-calendar-check"></i> Martes: Cadera Fuerte (Hinge y Agarre)</h3>
+                <p><strong>Estructura:</strong> 3 Series de A1 y A2. ¡3 minutos de descanso entre series A1 y 3 minutos entre series A2!</p>
+                <ul class="exercise-list">
+                    <li>
+                        <strong>A1: Peso Muerto Rumano (RDL) (10 Rep.)</strong>
+                        — <small>KB sujeta con ambas manos. Inclínate desde la cadera con rodillas semi-flexionadas. Siente el estiramiento en los isquiotibiales.</small>
+                        <a href="https://www.youtube.com/watch?v=ERZzCKpjEDg" target="_blank">Ver Video</a>
+                    </li>
+                    <li>
+                        <strong>A2: Paseos de Granjero (45 Seg. por brazo)</strong>
+                        — <small>Camina con una KB pesada a un lado. Mantén el tronco erguido y evita inclinarte.</small>
+                        <a href="https://www.youtube.com/watch?v=AXOrMG1rwu0" target="_blank">Ver Video</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="day-details">
+                <h3><i class="far fa-calendar-check"></i> Miércoles: Movilidad y Glúteo (Activación)</h3>
+                <p><strong>Estructura:</strong> 3 Series de A1 y A2. 2 minutos de descanso entre series.</p>
+                <ul class="exercise-list">
+                    <li>
+                        <strong>A1: Puente de Glúteo con KB en Cadera (15 Rep.)</strong>
+                        — <small>KB colocada en la cadera para resistir. Eleva la pelvis apretando los glúteos.</small>
+                        <a href="https://www.youtube.com/watch?v=Yao9ShODVZA" target="_blank">Ver Video</a>
+                    </li>
+                    <li>
+                        <strong>A2: Preparación TGU (Arm Bar) (45 Seg. por lado)</strong>
+                        — <small>Ejercicio de movilidad y estabilidad de hombros (KB ligera).</small>
+                        <a href="https://www.youtube.com/watch?v=CSJufb9LaZw" target="_blank">Ver Video</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="day-details">
+                <h3><i class="far fa-calendar-check"></i> Jueves: Fuerza Unilateral (Piernas Separadas y Empuje)</h3>
+                <p><strong>Estructura:</strong> 3 Series de A1 y A2. ¡3 minutos de descanso entre series!</p>
+                <ul class="exercise-list">
+                    <li>
+                        <strong>A1: Zancada Estática (8 Rep. por pierna)</strong>
+                        — <small>KB sostenida en la mano opuesta a la rodilla adelantada. Bajar recto, manteniendo la rodilla detrás de los dedos del pie.</small>
+                        <a href="https://www.youtube.com/watch?v=i0PhgeIEiaA" target="_blank">Ver Video</a>
+                    </li>
+                    <li>
+                        <strong>A2: Floor Press (10 Rep. por brazo)</strong>
+                        — <small>Acostada en el suelo. Empuja la KB verticalmente hacia el techo. Ideal para proteger los hombros.</small>
+                        <a href="https://www.youtube.com/watch?v=hkW9p-PqSRE" target="_blank">Ver Video</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="day-details">
+                <h3><i class="far fa-calendar-check"></i> Viernes: Core y Estabilidad (Anti-Rotación y Transporte)</h3>
+                <p><strong>Estructura:</strong> 3 Series de A1 y A2. ¡3 minutos de descanso entre series!</p>
+                <ul class="exercise-list">
+                    <li>
+                        <strong>A1: Remo de Plancha (Plank Row) (8 Rep. por brazo)</strong>
+                        — <small>En plancha alta, reme una KB. Evita la rotación de la cadera, enfocándote en el core (anti-rotación).</small>
+                    </li>
+                    <li>
+                        <strong>A2: Paseo del Mesero (Waiter's Carry) (45 Seg. por brazo)</strong>
+                        — <small>Camina con la KB sostenida con el brazo extendido sobre la cabeza. Concéntrate en la estabilidad del hombro.</small>
+                        <a href="https://www.youtube.com/watch?v=wrxIk5pscUs" target="_blank">Ver Video</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="day-details">
+                <h3><i class="far fa-calendar-check"></i> Sábado: Condicionamiento / Flujo</h3>
+                <p><strong>Estructura:</strong> 4 Rondas (EMOM - 4 minutos de trabajo + 3 minutos de descanso entre rondas).</p>
+                <ul class="exercise-list">
+                    <li>
+                        <strong>Ronda de 4 Minutos:</strong> 
+                        — <small>Minuto 1: 5 Sentadillas Goblet. Minuto 2: 6 Floor Press. Minuto 3: 10 KB RDL. Minuto 4: Marcha en Rack (15 seg. por brazo).</small>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="day-details">
+                <h3><i class="fas fa-bed"></i> Domingo: Descanso Total</h3>
+                <p>Recuperación completa. El descanso es parte del entrenamiento.</p>
             </div>
         </section>
 
-        <section id="plan">
+        <section id="cta-final">
             <div class="container">
-                <h2>🗓️ Su Plan Mensual Detallado</h2>
-                <p>Todo lo que necesita para transformar su cuerpo, en un solo pago mensual.</p>
-                <div class="plan-details">
-                    <div class="plan-info">
-                        <ul class="plan-lista">
-                            <li>**Clase Presencial Exclusiva (60 min/mes):** Corrección y progresión avanzada.</li>
-                            <li>**Rutina Diaria de 30 Minutos (7 días):** Programa estructurado para el hogar.</li>
-                            <li>**Enfoque 100% Kettlebell:** Máxima eficiencia de la herramienta.</li>
-                            <li>**Implementación Incluida:** No necesita comprar equipos.</li>
-                            <li>**Soporte Ilimitado:** Respondo sus dudas sobre técnica o plan por remoto.</li>
-                        </ul>
-                    </div>
-                    <div class="plan-precio-box">
-                        <p>Inversión Mensual</p>
-                        <p class="plan-precio">1 UF</p>
-                        <a href="#cta-final" class="cta-button" style="background-color: var(--azul-principal);">
-                            ¡EMPEZAR A ENTRENAR!
-                        </a>
-                    </div>
-                </div>
+                <h2>¡Lista para Empezar! Contáctame</h2>
+                <p>Si tienes alguna duda sobre el plan, la técnica o necesitas agendar la clase presencial, estoy listo para ayudarte.</p>
+                <a href="mailto:tu_correo@ejemplo.com" class="cta-button">
+                    <i class="fas fa-envelope"></i> Contactar a Miguel
+                </a>
             </div>
-        </section>
-
-        <section id="cta-final" class="container">
-            <h2>No posponga más su salud. Inicie su transformación.</h2>
-            <p style="margin-bottom: 30px;">
-                La disponibilidad para las clases presenciales es limitada. Asegure su cupo hoy.
-            </p>
-            <a href="mailto:su_correo@ejemplo.com" class="cta-button">
-                ¡RESERVE SU PLAN AHORA! 🚀
-            </a>
-            <p style="margin-top: 15px; font-size: 0.9rem;">
-                Entrenador Certificado (Doble Certificación en Kettlebells).
-            </p>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>© 2025 [Su Nombre/Marca]. Kettlebell Foundations. Todos los derechos reservados.</p>
-            <div>
-                <a href="#">Políticas de Privacidad</a> |
-                <a href="#">Términos y Condiciones</a>
-            </div>
+            <p>Entrenador Miguel: Doble Certificación en Kettlebells.</p>
+            <p>© 2025 Kettlebell Foundations. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
