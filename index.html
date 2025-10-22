@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kettlebell Foundations | Entrenamiento Personal Certificado a Domicilio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ==================== */
+        /* === ESTILOS CSS === */
+        /* ==================== */
+
+        /* Variables de Color (UI/UX) */
+        :root {
+            --blanco: #FFFFFF;
+            --azul-claro: #E9F1FA; /* Fondo suave */
+            --azul-principal: #00ABE4; /* CTA y detalles */
+            --azul-oscuro: #1A2A42; /* Texto y contraste */
+            --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--azul-oscuro);
+            background-color: var(--blanco);
+        }
+
+        /* Contenedor General */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Tipografía */
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--azul-oscuro);
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--azul-principal);
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 1.5rem;
+            color: var(--azul-oscuro);
+            margin-bottom: 10px;
+        }
+
+        /* Botón CTA Principal */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--azul-principal);
+            color: var(--blanco);
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: var(--sombra-suave);
+        }
+        .cta-button:hover {
+            background-color: #008cc9; /* Tono más oscuro de azul */
+            transform: translateY(-2px);
+        }
+
+        /* ==================== */
+        /* === SECCIONES === */
+        /* ==================== */
+
+        /* 1. Hero Section */
+        #hero {
+            background: var(--azul-claro);
+            padding: 80px 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-image {
+            flex: 1;
+            max-width: 500px;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: var(--sombra-suave);
+        }
+        .hero-text .subtitulo {
+            font-size: 1.3rem;
+            color: var(--azul-oscuro);
+            margin: 20px 0 30px;
+        }
+        .hero-text .uvp {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--azul-oscuro);
+            margin-bottom: 40px;
+        }
+
+        /* 2. Problema -> Solución */
+        #problema-solucion {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .solucion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .solucion-card {
+            background: var(--blanco);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--sombra-suave);
+            border-top: 5px solid var(--azul-principal);
+        }
+        .solucion-card i {
+            font-size: 2rem;
+            color: var(--azul-principal);
+            margin-bottom: 15px;
+        }
+
+        /* 3. La Ciencia de Mis Rutinas */
+        #ciencia {
+            background-color: var(--azul-claro);
+            padding: 60px 0;
+            text-align: center;
+        }
+        .ciencia-box {
+            background: var(--blanco);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 30px auto;
+            text-align: left;
+            box-shadow: var(--sombra-suave);
+        }
+        .ciencia-box strong {
+            color: var(--azul-principal);
+            font-weight: 700;
+        }
+
+        /* 4. Beneficios Kettlebells */
+        #beneficios {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .beneficio-item {
+            padding: 20px;
+            border: 1px solid var(--azul-claro);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* 5. El Plan */
+        #plan {
+            background-color: var(--azul-oscuro);
+            padding: 60px 0;
+            color: var(--blanco);
+            text-align: center;
+        }
+        #plan h2 {
+            color: var(--azul-principal);
+        }
+        .plan-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin: 40px 0;
+        }
+        .plan-precio {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--blanco);
+            line-height: 1;
+        }
+        .plan-lista {
+            text-align: left;
+            list-style: none;
+            font-size: 1.1rem;
+        }
+        .plan-lista li {
+            margin-bottom: 15px;
+        }
+        .plan-lista li::before {
+            content: "✅";
+            margin-right: 10px;
+        }
+
+        /* 6. CTA Final */
+        #cta-final {
+            padding: 50px 0;
+            text-align: center;
+            background-color: var(--blanco);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--azul-oscuro);
+            color: var(--azul-claro);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--azul-claro);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Media Queries para Responsividad Móvil */
+        @media (max-width: 768px) {
+            #hero {
+                min-height: 90vh;
+                padding: 60px 0;
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-image {
+                order: -1; /* Mueve la imagen arriba en móviles */
+                margin-bottom: 20px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .plan-details {
+                flex-direction: column;
+            }
+            .plan-precio {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section id="hero" class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>ENTRENA INTELIGENTE EN CASA: <br>Kettlebells con un Experto Certificado.</h1>
+                    <p class="subtitulo">
+                        Fuerza, Pérdida de Grasa y Técnica Perfecta, garantizado por la ciencia, **sin salir de tu hogar.**
+                    </p>
+                    <p class="uvp">
+                        Soy tu entrenador personal certificado. **Llevo toda la implementación (Kettlebells) sin costo extra.**
+                    </p>
+                    <a href="#plan" class="cta-button">
+                        👉 COMIENZA HOY: Plan Foundations (1 UF/mes)
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <img src="placeholder-trainer.jpg" alt="Entrenador personal certificado corrigiendo Sentadilla Goblet con kettlebell a cliente en casa.">
+                </div>
+            </div>
+        </section>
+
+        <section id="problema-solucion" class="container">
+            <h2>Transforma tus Obstáculos en Resultados</h2>
+            <div class="solucion-grid">
+                <article class="solucion-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>"No sé qué comprar."</h3>
+                    <p><strong>Implementación Incluida.</strong> No gaste en equipo. Yo llevo las Kettlebells necesarias para cada sesión presencial.</p>
+                </article>
+                <article class="solucion-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>"No tengo tiempo."</h3>
+                    <p><strong>Rutinas Optimizadas (30 Min).</strong> Sesiones diarias de solo 30 minutos, diseñadas para máxima eficiencia en poco tiempo.</p>
+                </article>
+                <article class="solucion-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>"Me da miedo lesionarme."</h3>
+                    <p><strong>Técnica Certificada.</strong> Mi doble certificación garantiza que aprenda la técnica perfecta para prevenir dolores y maximizar ganancias.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="ciencia">
+            <div class="container">
+                <h2>🔬 La Metodología de 3 Minutos: Desarrollo de Fuerza Óptimo</h2>
+                <div class="ciencia-box">
+                    <p>
+                        Como su entrenador, diseño sus rutinas basándome en la evidencia. El objetivo principal en la fase Foundations es construir **fuerza y masa muscular** de forma segura.
+                    </p>
+                    <p>
+                        La investigación reciente (respaldada por Scielo y MensHealth) demuestra que el descanso de **3 minutos entre series** en ejercicios clave (como la Sentadilla Goblet) es **superior** para este objetivo.
+                    </p>
+                    <p>
+                        <strong>Su Beneficio:</strong> Este tiempo de recuperación garantiza la **calidad** de cada repetición y asegura que sus músculos reciban el estímulo óptimo para crecer, justificando así la estructura de nuestras rutinas de 30 minutos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="container">
+            <h2>✨ 7 Poderosas Ventajas del Entrenamiento con Kettlebells</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-item">
+                    <h3>Fuerza Funcional</h3>
+                    <p>Ejercicios compuestos que trabajan múltiples grupos musculares a la vez.</p>
+                </div>
+                <div class="beneficio-item">
+                    <h3>Quema de Grasa</h3>
+                    <p>Alto impacto metabólico con efecto *afterburn* prolongado.</p>
+                </div>
+                <div class="beneficio-item">
+                    <h3>Core Indestructible</h3>
+                    <p>Máximo trabajo de estabilidad y anti-rotación para una postura sana.</p>
+                </div>
+                <div class="beneficio-item">
+                    <h3>Movilidad Mejorada</h3>
+                    <p>Movimientos dinámicos que aumentan su rango de movimiento.</p>
+                </div>
+                <div class="beneficio-item">
+                    <h3>Fuerza de Agarre</h3>
+                    <p>Aumento significativo en la fuerza de manos y antebrazos.</p>
+                </div>
+                <div class="beneficio-item">
+                    <h3>Adiós Dolores</h3>
+                    <p>Técnica adecuada que ayuda a reducir molestias de cuello, hombros y espalda.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="plan">
+            <div class="container">
+                <h2>🗓️ Su Plan Mensual Detallado</h2>
+                <p>Todo lo que necesita para transformar su cuerpo, en un solo pago mensual.</p>
+                <div class="plan-details">
+                    <div class="plan-info">
+                        <ul class="plan-lista">
+                            <li>**Clase Presencial Exclusiva (60 min/mes):** Corrección y progresión avanzada.</li>
+                            <li>**Rutina Diaria de 30 Minutos (7 días):** Programa estructurado para el hogar.</li>
+                            <li>**Enfoque 100% Kettlebell:** Máxima eficiencia de la herramienta.</li>
+                            <li>**Implementación Incluida:** No necesita comprar equipos.</li>
+                            <li>**Soporte Ilimitado:** Respondo sus dudas sobre técnica o plan por remoto.</li>
+                        </ul>
+                    </div>
+                    <div class="plan-precio-box">
+                        <p>Inversión Mensual</p>
+                        <p class="plan-precio">1 UF</p>
+                        <a href="#cta-final" class="cta-button" style="background-color: var(--azul-principal);">
+                            ¡EMPEZAR A ENTRENAR!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-final" class="container">
+            <h2>No posponga más su salud. Inicie su transformación.</h2>
+            <p style="margin-bottom: 30px;">
+                La disponibilidad para las clases presenciales es limitada. Asegure su cupo hoy.
+            </p>
+            <a href="mailto:su_correo@ejemplo.com" class="cta-button">
+                ¡RESERVE SU PLAN AHORA! 🚀
+            </a>
+            <p style="margin-top: 15px; font-size: 0.9rem;">
+                Entrenador Certificado (Doble Certificación en Kettlebells).
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 [Su Nombre/Marca]. Kettlebell Foundations. Todos los derechos reservados.</p>
+            <div>
+                <a href="#">Políticas de Privacidad</a> |
+                <a href="#">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
